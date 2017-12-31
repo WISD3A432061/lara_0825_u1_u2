@@ -54,9 +54,12 @@ Route::get('/test', function () {
     $post‐>save();
     */
     //使用delete方法删除資料
-    $post = \App\Post::find(1);
+    /*$post = \App\Post::find(1);
     $post->delete();
-   });
+    */
+    //使用destroy方法删除資料
+    \App\Post::destroy(2);
+    });
 
 
 
