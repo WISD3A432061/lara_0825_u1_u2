@@ -32,9 +32,13 @@ Route::get('/test', function () {
     dd($posts);
     */
     //find方法
-    $post = \App\Post::find(1);
+    /*$post = \App\Post::find(1);
     dd($post);
-});
+    */
+    //條件式
+    $posts = \App\Post::where('id', '<', 10)‐>orderBy('id', 'DESC')‐>get();
+    dd($posts);
+    });
 
 
 
