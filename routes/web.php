@@ -27,8 +27,13 @@ Route::get('/test', function () {
     $post->content ='test content';
     $post->save();
     */
-    $posts = \App\Post::all();
+    //all方法
+    /*$posts = \App\Post::all();
     dd($posts);
+    */
+    //find方法
+    $post = \App\Post::find(1);
+    dd($post);
 });
 
 
