@@ -22,10 +22,13 @@ Route::get('/', function () {
 */
 
 Route::get('/test', function () {
-    $post = new \App\Post();
+    /*$post = new \App\Post();
     $post->title ='test title';
     $post->content ='test content';
     $post->save();
+    */
+    $posts = \App\Post::all();
+    dd($posts);
 });
 
 
