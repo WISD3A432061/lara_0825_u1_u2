@@ -42,11 +42,16 @@ Route::get('/test', function () {
 
     //使用update方式更新資料
     $post =\App\Post::find(1);
-    $post->update([
+    /*$post->update([
         'title' => 'updated title',
         'content' => 'updated content',
         ]);
-
+     */
+    //使用save方法更新資料
+    $post = \App\Post::find(1);
+    $post->title ='saved title';
+    $post->content ='saved conntent';
+    $post‐>save();
     });
 
 
