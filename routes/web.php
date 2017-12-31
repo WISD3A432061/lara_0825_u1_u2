@@ -36,8 +36,17 @@ Route::get('/test', function () {
     dd($post);
     */
     //條件式
-    $posts = \App\Post::where('id', '<', 10)‐>orderBy('id', 'DESC')‐>get();
+    /*$posts = \App\Post::where('id', '<', 10)‐>orderBy('id', 'DESC')‐>get();
     dd($posts);
+    */
+
+    //使用update方式更新資料
+    $post =\App\Post::find(1);
+    $post->update([
+        'title' => 'updated title',
+        'content' => 'updated content',
+        ]);
+
     });
 
 
