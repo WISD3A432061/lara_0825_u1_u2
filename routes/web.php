@@ -73,11 +73,16 @@ Route::get('/test', function () {
     dd($featuredPosts);
     */
     //取得Model
-    $fourthPost = \App\Post::find(4);
+    /*$fourthPost = \App\Post::find(4);
     dd($fourthPost);
-    $lastPost = \App\Post::orderBy('id', 'DESC')‐>first();
+    $lastPost = \App\Post::orderBy('id', 'DESC')->first();
     dd($lastPost);
-    });
+    */
+    $post = \App\Post::find(1);
+        foreach($post->comments as $comment) {
+                echo $comment->content.'<br>';
+         }
+});
 
 
 
